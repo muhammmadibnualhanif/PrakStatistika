@@ -1,0 +1,7 @@
+data_hanif_csv = read.csv("C:/PrakStat.csv", header = TRUE, sep = ";")
+View(data_hanif_csv)
+mean(data_hanif_csv$Tinggi.Badan)
+str(data_hanif_csv)
+install.packages("xlsx")
+library("xlsx")
+data_hanif_xlsx = read.xlsx("C:/PrakStat.xlsx", 1)
