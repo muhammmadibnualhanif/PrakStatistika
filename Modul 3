@@ -1,0 +1,25 @@
+data_hanif=read.delim("clipboard")
+View(data_hanif)
+
+hanif <- data_hanif[data_hanif$Tinggi.Badan==160,]  
+View(hanif)
+
+hanif$Tinggi.Badan <- ifelse(hanif$Tinggi.Badan > 160, c("Tinggi"), c("Pendek"))
+View(hanif)
+
+hanif$Jurusan <- "Infor20"
+View(hanif)
+
+hanif$Fakultas <- NULL
+View(hanif)
+
+data_hanif.kolom1dan2 <- data_hanif[,1:2] 
+View(data_hanif.kolom1dan2)
+
+data_hanif.baris1sd3 <- data_hanif[1:3,] 
+data_hanif.baris4sd6 <- data_hanif[4:6,] 
+data_hanif.baris1sd6 <- rbind(data_hanif.baris1sd3, data_hanif.baris4sd6) 
+View(data_hanif.baris1sd6)
+
+data_hanif.sort<-data_hanif[order(data_hanif$Waktu.Perjalan),] 
+View(data_hanif.sort)
