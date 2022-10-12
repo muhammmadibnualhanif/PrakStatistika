@@ -1,0 +1,3 @@
+data_hanif = read.delim("clipboard")
+View(data_hanif)
+t.test(data_hanif$volume, conf.level = 0.5)
