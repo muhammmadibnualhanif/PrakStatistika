@@ -1,0 +1,48 @@
+summary(iris)
+head(iris)
+by(iris$Petal.Length, iris$Species, summary)
+mean(iris$Sepal.Length)
+var(iris$Sepal.Length)
+boxplot(iris$Petal.Length)
+boxplot(Petal.Length ~ Species, data=iris, main="Petal Length", xlab="Species", ylab="Length")
+
+hist(iris$Petal.Length)
+hist(iris$Sepal.Width)
+hist(iris$Sepal.Width[iris$Species=="setosa"])
+hist(iris$Sepal.Width[iris$Species=="versicolor"])
+d=density(iris$Petal.Length)
+plot(d)
+d=density(iris$Sepal.Width[iris$Species=="versicolor"])
+plot (d)
+
+install.packages("ggplot2")
+library(ggplot2)
+data_hanif=read.csv("C:/Dataset/DirectMarketing.csv")
+qplot(data_hanif$AmountSpent, data_hanif$Salary)
+plot(data_hanif$AmountSpent, data_hanif$Salary)
+
+
+hist(iris$Petal.Length)
+hist(iris$Sepal.Width)
+hist(iris$Sepal.Width[iris$Species=="setosa"])
+hist(iris$Sepal.Width[iris$Species=="versicolor"])
+d=density(iris$Petal.Length)
+plot(d)
+d=density(iris$Sepal.Width[iris$Species=="versicolor"])
+plot (d)
+
+
+install.packages("ggplot2")
+library(ggplot2)
+data_hanif=read.csv("C:/Dataset/DirectMarketing.csv")
+qplot(data_hanif$AmountSpent, data_hanif$Salary)
+
+
+data_hanif = read.csv("C:/Dataset/DirectMarketing.csv")
+hist(data_hanif$AmountSpent)
+hist(data_hanif$AmountSpent[data_hanif$Married=="Married"])
+hist(data_hanif$AmountSpent[data_hanif$Married=="Single"])
+d=density(data_hanif$AmountSpent)
+plot(d)
+d=density(data_hanif$AmountSpent[data_hanif$Married=="Married"])
+plot (d)
