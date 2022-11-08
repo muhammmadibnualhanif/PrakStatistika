@@ -1,0 +1,24 @@
+import pandas as pd
+#memanggil dan menampilkan dataset
+data_hanif = pd.read_csv('C:/Users/USER/OneDrive/Documents/titanic.csv')
+print(data_hanif)
+
+#mengambil data pada kolom tertentu
+data1 = data_hanif.loc[:,['Age','Pclass','Survived']]
+print(data1)
+
+#memvisualisasikan data titanic
+data2 = data_hanif[['Age', 'Pclass', 'Survived']]
+data2.plot(title='Persebaran Data', x='Age', y='Pclass', kind='scatter', c='Survived', colormap='Paired')
+
+#memanipulasi data jumlah penumpang berdasarkan group Pclass
+data3 = data_hanif[['Name', 'Sex', 'Age', 'Pclass', 'Fare']]
+penumpang=data3.groupby('Sex')['Name'].nunique()
+print('Jumlah Penumpang:\n', penumpang)
+
+#memfilter data penumpang yang selamat berdasarkan pclass
+data4 = data_hanif[['Name', 'Sex', 'Age', 'Pclass', 'Fare']]
+notsurvivedpassanger=data4['Sex'].loc[data_hanif['Survived']==0]
+print('Penumpang yang tidak survived:\n', notsurvivedpassanger.value_counts())
+survivedpassanger=data4['Pclass'].loc[data_hanif['Survived']==1]
+print('\nPenumpang yang survived:\n', survivedpassanger.value_counts())
