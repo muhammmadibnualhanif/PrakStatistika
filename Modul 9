@@ -1,0 +1,18 @@
+y = rnorm(1000, 165, 15)
+View(y)
+hist(y)
+
+u = rnorm(1000, 3.12, 0.25)
+View(u)
+hist(u)
+
+pnorm(150, 165, 6)
+
+1-pnorm(170, 165, 6)
+
+pnorm(180, 165, 6) - pnorm(150, 165,6)
+pnorm(2, 7, 0.9875807
+
+pnorm(158, 175, 30) - pnorm(125, 175, 30)
+
+pnorm(150, 175, 30, lower.tail = FALSE)
