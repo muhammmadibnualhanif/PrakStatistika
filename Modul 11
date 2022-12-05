@@ -1,0 +1,17 @@
+df_hanif = read.delim("clipboard")
+head(df_hanif)
+
+model <- aov (korosi~metode, data=df_hanif)
+summary (model)
+
+tukey.test <- TukeyHSD(model)
+tukey.test
+
+df_hanif=PlantGrowth
+View(df_hanif)
+
+model <- aov(weight~group, data=df_hanif)
+summary(model)
+
+tukey.test<-TukeyHSD(model)
+tukey.test
