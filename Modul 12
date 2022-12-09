@@ -1,0 +1,18 @@
+df_hanif=read.delim("clipboard")
+head(df_hanif)
+model_reg=lm(df_hanif$Y~df_hanif$X)
+summary(model_reg)
+
+model_reg=lm(df_hanif$Y~df_hanif$X)
+summary(model_reg)
+
+df_hanif=read.delim("clipboard")
+df_hanif$brick_dummy <- ifelse(df_hanif$Brick =="Yes", 1,0)
+df_hanif$N_dummy1 <-  ifelse(df_hanif$Neighborhood =="West", 1,0)
+df_hanif$N_dummy2 <- ifelse(df_hanif$Neighborhood =="North", 1,0)
+model=lm(df_hanif$Price~df_hanif$SqFt+df_hanif$Bedrooms+df_hanif$Bathrooms+df_hanif$brick_dummy+df_hanif$N_dummy1+df_hanif$N_dummy2)
+summary(model)
+
+df_hanif=read.delim("clipboard")
+by(df_hanif$Price, df_hanif$Neighborhood, mean)
+by(df_hanif$Price, df_hanif$Brick, mean)
