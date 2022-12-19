@@ -1,0 +1,21 @@
+data_hanif=read.delim("clipboard")
+wilcox.test(data_hanif$sebelum,data_hanif$setelah,paired=TRUE)
+
+data_hanif=read.delim("clipboard")
+wilcox.test(data_hanif$sebelum,data_hanif$sesudah,paired=TRUE)
+
+df_hanif=read.delim("clipboard")
+# independent 2-group Mann-Whitney U Test
+wilcox.test(df_hanif$obat~df_hanif$grup)
+# where y is numeric and A is A binary factor
+head(df_hanif)
+rank(df_hanif$obat)
+
+dataku_hanif = read.delim("clipboard")
+View(dataku_hanif)
+wilcox.test(dataku_hanif$Ganjil,dataku_hanif$Genap ,paired=TRUE
+
+dataku_hanif = read.delim("clipboard")
+View(dataku_hanif)
+wilcox.test(dataku_hanif$caffeine,dataku_hanif$placebo ,paired=TRUE)
+            
